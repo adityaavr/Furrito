@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,7 +11,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text(
+        title: const Text(
           "Chan's Family",
           style: TextStyle(
             fontSize: 30,
@@ -20,8 +22,8 @@ class HomePage extends StatelessWidget {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon: Icon(Icons.menu),
-              color: Color.fromARGB(255, 191, 131, 26),
+              icon: const Icon(Icons.menu),
+              color: const Color.fromARGB(255, 191, 131, 26),
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
@@ -33,7 +35,7 @@ class HomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 246, 217, 217),
               ),
@@ -47,19 +49,19 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Home'),
+              title: const Text('Home'),
               onTap: () {
                 // Handle navigation to home page
               },
             ),
             ListTile(
-              title: Text('Profile'),
+              title: const Text('Profile'),
               onTap: () {
                 // Handle navigation to profile page
               },
             ),
             ListTile(
-              title: Text('Settings'),
+              title: const Text('Settings'),
               onTap: () {
                 // Handle navigation to settings page
               },
@@ -69,15 +71,15 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(height: 100),
+          const SizedBox(height: 100),
           Center(
             child: Column(
               children: [
                 Image.asset("assets/cutepenguin.png"),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     MetricItem(
                       title: 'Hunger',
                       progress: 0.8,
@@ -118,13 +120,13 @@ class MetricItem extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Stack(
           alignment: Alignment.center,
           children: [
@@ -140,7 +142,7 @@ class MetricItem extends StatelessWidget {
             ),
             Text(
               '${(progress * 100).toInt()}%',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,

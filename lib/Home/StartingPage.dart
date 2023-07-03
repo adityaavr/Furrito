@@ -7,12 +7,12 @@ class StartingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 246, 217, 217),
+      backgroundColor: const Color.fromARGB(255, 246, 217, 217),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Familia",
               style: TextStyle(
                 fontSize: 50,
@@ -20,8 +20,8 @@ class StartingPage extends StatelessWidget {
                 color: Color.fromARGB(255, 191, 131, 26),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+            const Padding(
+              padding: EdgeInsets.only(top: 8.0),
               child: Text(
                 "FOR YOUTHS, FOR FAMILIES",
                 style: TextStyle(
@@ -32,7 +32,7 @@ class StartingPage extends StatelessWidget {
               ),
             ),
             // small space this will be where the logo will be
-            SizedBox(
+            const SizedBox(
               height: 400,
             ),
             Align(
@@ -54,11 +54,11 @@ class StartingPage extends StatelessWidget {
                         BoxShadow(
                           color: Colors.black.withOpacity(0.2),
                           blurRadius: 10,
-                          offset: Offset(0, 5),
+                          offset: const Offset(0, 5),
                         )
                       ],
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Tap to start",
                         style: TextStyle(
